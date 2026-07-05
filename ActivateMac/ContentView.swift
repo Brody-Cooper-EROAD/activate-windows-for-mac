@@ -3,6 +3,7 @@
 //  ActivateMac
 //
 //  Created by Bùi Đặng Bình on 5/4/25.
+//  Modified by Brody Cooper on 2/7/26
 //
 
 import SwiftUI
