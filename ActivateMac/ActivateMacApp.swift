@@ -75,7 +75,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 x: screenFrame.maxX - round(screenFrame.width * 0.02) - windowSize.width,
                 y: screenFrame.minY + round(screenFrame.height * 0.04)
             )
-            print("Min Y: \(screenFrame.minY)")
             
             let window = NSWindow(
                 contentRect: NSRect(origin: windowOrigin, size: windowSize),
@@ -92,7 +91,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             window.ignoresMouseEvents = true
             window.collectionBehavior = [.canJoinAllSpaces, .stationary]
             
-            window.makeKeyAndOrderFront(nil)
+            window.orderFront(nil)
             
             watermarkWindows.append(window)
         }
@@ -119,9 +118,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         for window in watermarkWindows {
             if isVisible {
-                window.makeKeyAndOrderFront(nil)
+                window.orderFront(nil)
             } else {
-                window.makeKeyAndOrderFront(nil)
+                window.orderOut(nil)
             }
         }
     }
